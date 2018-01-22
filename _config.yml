@@ -17,7 +17,7 @@ title: Your awesome title
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   
-baseurl: "/concursos" # the subpath of your site, e.g. /blog
+baseurl: "/blu-lagum" # the subpath of your site, e.g. /blog
 url: "https://ccmdesign.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: 
 github_username:  
@@ -28,7 +28,7 @@ plugins:
 
 # Folder Structure
 source: ./source
-destination: _site/concursos
+destination: _site/blu-lagum
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
