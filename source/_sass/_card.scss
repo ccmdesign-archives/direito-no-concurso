@@ -1,0 +1,117 @@
+.card-list {
+  // max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+
+  .card {
+    flex: 1;
+    flex-basis: 3;
+    min-width: 350px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    &__bg-image {
+      background: url('/images/umncjq4kpca-chuttersnap.jpg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: .5;
+      filter: grayscale(100%);
+
+      @extend .u-transition;
+    }
+
+    &:hover .card__bg-image {
+      opacity: 1;
+      filter: grayscale(0);
+      @extend .u-transition;
+    }
+
+    &__title {
+      position: relative;
+      z-index: 1;
+    }
+
+    &__header {
+      padding-top: 30px;
+      // background-color: $main-color;
+      padding: 90px 0 25px;
+      color: white;
+      position: relative;
+
+      h1 {
+        font-size: 1.2rem;
+        font-weight: 100;
+        color: white;
+        text-align: left;
+        padding: 0 30px;
+
+        > span {
+          background-color: rgba($main-color, .8);
+          line-height: 1.5;
+        }
+      }
+    }
+
+    .authors {
+      font-weight: 400;
+      font-size: .9rem;
+      padding: 10px 0;
+    }
+
+    &__content { 
+      flex: 1; 
+      padding-left: 30px;
+      padding-right: 30px;
+
+    }
+    
+    &__controls { 
+      padding: 0 20px;
+      margin: 30px 0 0;
+      // background-color: rgba(black, .05);
+      border-top: 1px solid rgba(black, .1);
+
+      > a {
+        display: inline-block;
+        padding: 12px 10px 6px 10px;
+        opacity: .3;
+        @extend .u-transition;
+
+        &:hover {
+          opacity: 1;
+          @extend .u-transition;
+        }
+      }
+    }
+  }
+}
+
+.card {
+  
+  border: 1px solid rgba(black, .1);
+  margin: 20px 10px 0;
+  // background-color: rgba(black, .05);
+
+  h1, h2, p {
+    font-weight: 100;
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: .9rem;
+  }
+}

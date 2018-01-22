@@ -1,0 +1,77 @@
+---
+---
+
+// Breakpoints
+$small-only: (max-width 40em);
+$medium: 40.063em 64em;
+$touch: (max-width 64em);
+$medium-up: 40.063em;
+$large: 64.063em;
+
+$blue: #00c8ff;
+// $red: #E84A5F;
+// $yellow: #ffcc00;
+
+// Colors 1
+$purple: #351330;
+$blue-gray: #424254;
+$green: #64908A;
+$beige: #E8CAA4;
+$red: #CC2A41;
+
+
+$main-color: $red;
+$accent-color: $blue-gray;
+
+
+$body-font: "freight-text-pro",Georgia,Cambria,"Times New Roman",Times,serif;
+$display-font: "din-2014",sans-serif;
+
+
+.clearfix:after {
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+.u-material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+.u-transition { transition: all .4s ease; }
+
+@mixin placeholder {
+  &::-webkit-input-placeholder { @content }
+  &:-moz-placeholder { @content }
+  &::-moz-placeholder { @content }
+  &:-ms-input-placeholder { @content }
+}
+
+// ---
+
+
+@import 'breakpoint';
+@import 'main';
+@import "form";
+@import "button";
+@import "prose";
+@import "smartlinks";
+@import "box";
+@import "questionnaire";
+// @import "tags";
+// @import "card";
+// @import "custom";

@@ -1,0 +1,232 @@
+// Form Reset
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+input[type="date"],
+input[type="password"],
+select,
+textarea {  
+  letter-spacing: .5px;
+  font-family: "din-2014",sans-serif;
+  font-weight: 100;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+input[type="date"],
+input[type="password"] { border: 0; }
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus { outline: none; }
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+input[type="date"],
+input[type="password"],
+textarea {
+    text-align: left;
+    border: 1px solid transparent;
+    background-color: rgba(black, .05);
+    width: 100%;
+    margin-bottom: 20px;
+    @extend .u-transition;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+input[type="password"] { padding: 17px; }
+
+input[type="date"] { padding: 15px; }
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+    background-color: rgba(black, .05);
+    border: 1px solid $main-color;
+    @extend .u-transition;
+}
+
+textarea { resize: vertical; }
+
+input[type="checkbox"],
+input[type="radio"] {
+    display: none;
+}
+
+input:disabled + label {
+    opacity: .4;
+}
+
+button, 
+input[type='button'],
+input[type='reset'],
+input[type="submit"] {
+    @extend .button;
+    border: 0;
+}
+
+input[type="file"] { @extend .button; }
+
+button {
+    border-radius: 0;
+    padding: 17px 20px;
+}
+
+fieldset {
+    border: 0;
+    padding: 0;
+    margin: 5px 0;
+}
+
+legend {
+
+}
+
+
+form,
+.form {
+    padding: 10px 0;
+    color: black;
+
+    input[type="date"] {
+      color: rgba(black, .5);
+    }
+
+    ::-webkit-input-placeholder {
+        color: rgba(black, .5);
+        text-align: left;
+    }
+    :-moz-placeholder {
+        color: rgba(black, .5);
+        text-align: left;
+    } /* Firefox 18- */
+    ::-moz-placeholder {
+        color: rgba(black, .5);
+        text-align: left;
+    } /* Firefox 19+ */
+    :-ms-input-placeholder {
+        color: rgba(black, .5);
+        text-align: left;
+    }
+
+    &--negative {
+        input { color: white; }
+
+        input[type='text'], input[type='email'], input[type='date'], input[type='tel'], input[type='submit'], textarea {
+            background-color: rgba(white, .1);
+            @include placeholder {
+                color: white;
+            }
+            &:focus {
+                background-color: rgba(white, .2);
+                @extend .u-transition;
+            }
+        }
+
+        input[type="submit"]:hover {
+            background-color: rgba(white, .2);
+        }
+    }
+}
+
+.checkbox,
+.radio {
+    padding:7px 10px;
+    margin-bottom: 10px;
+
+    input[type="checkbox"] + label:before,
+    input[type="radio"] + label:before {
+        vertical-align: -6px;
+        margin-right: 15px;
+    }
+
+    input[type="checkbox"] + label:before {
+        @extend .u-material-icons;
+        content: 'check_box_outline_blank';
+    }
+
+    input[type="checkbox"]:checked + label:before {
+        @extend .u-material-icons;
+        content: 'check_box';
+    }
+
+    input[type="radio"] + label:before {
+        @extend .u-material-icons;
+        content: 'radio_button_unchecked';
+    }
+
+    input[type="radio"]:checked + label:before {
+        @extend .u-material-icons;
+        content: 'radio_button_checked';
+    }
+}
+
+.select {
+    background-color: rgba(black, .05);
+    text-align: left;
+    padding: 0 65px 0 15px;
+    margin-bottom: 15px;
+    position: relative;
+    @extend .u-transition;
+    border: 1px solid transparent;
+
+    &::before {
+        @extend .u-material-icons;
+        content: 'keyboard_arrow_down';
+        position: absolute;
+        pointer-events: none;
+        right: 0;
+        padding-top: 17px;
+        margin: 0 auto 0 auto;
+        width: 42px;
+        height: 32px;
+        color: black;
+        z-index: -1
+    }
+
+    select {
+        height: 54px;
+        border: 0;
+        border-radius: 0;
+        margin: 0;
+        background-color: transparent;
+        width: 100%;
+        font-size: 1.1rem;
+        -webkit-appearance: none;
+        background-image: none;
+        color: rgba(black, .6);
+    }
+
+    &:hover {
+        background-color: rgba(black, .05);
+        @extend .u-transition;
+    }
+
+    &:focus {
+      border: 1px solid $main-color;
+    }
+}
+
+.large-input {
+  font-size: 3rem;
+  font-weight: 100;
+
+  &:disabled {
+    background-color: transparent;
+    border: 1px solid rgba(black, .1);
+  }
+}
+

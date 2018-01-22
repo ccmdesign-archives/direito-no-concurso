@@ -1,0 +1,194 @@
+.questionnaire {
+  display: grid;
+  height: 100%;
+  max-height: 100%;
+  // overflow-y: hidden;
+  grid-template-columns: 100%;
+  grid-template-rows: 70px 4px auto;
+}
+
+.slider {
+}
+
+.question {
+
+  h1, h2, h3, h4, h5, h6 { 
+    font-family: $display-font; 
+    margin: 0;
+  }
+
+  p {
+       
+  }
+
+  &__content {
+    padding: 50px 30px 12px;
+
+    @include breakpoint($medium-up) { 
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    h4 {
+      text-transform: uppercase;
+      color: $blue-gray;
+    }
+  }
+
+  &__controls {
+    padding: 30px 0;
+  }
+
+  .controls {
+    display: flex; 
+    flex-wrap: wrap;
+    flex-direction: rows;
+    @include breakpoint($medium-up) { flex-direction: columns; }
+    
+    &__button {
+      display: block;
+      width: 100%;
+      margin-bottom: 8px;
+      color: $blue-gray;
+
+      &:hover { background-color: rgba($green, .2); }
+      &.js-active {
+        background-color: $blue-gray;
+        color: white;
+      }
+      
+      @include breakpoint($medium-up) {
+        padding: 20px;
+        font-size: 1.5rem;
+      }
+    }
+
+    &--aux {
+      @include breakpoint($medium-up) { margin-top: 30px; }
+
+    }
+
+    &--yes,
+    &--no {
+      @include breakpoint($medium-up) {
+        flex: 1;
+        padding: 40px;
+        font-size: 2rem;
+      }
+    }
+
+    &--yes {
+      @include breakpoint($medium-up) { margin-right: 30px; }
+      &:hover { background-color: rgba($green, .2); }
+      &.js-active { background-color: $green; }
+    }
+
+    &--no {
+      &:hover { background-color: rgba($red, .2); }
+      &.js-active { background-color: $red; }
+    }
+
+    &--yes { color: $green;}
+    &--no { color: $red;}
+    
+    &--prev,
+    &--next {
+      display: inline-block;
+      width: auto;
+      border: 0;
+
+
+      i { 
+        margin-left: 0; 
+        font-size: 40px;
+      }
+    }
+
+    &--next { align-self: flex-end; }
+  }
+}
+
+.slider-controls {
+  flex-direction: columns;
+  justify-content: space-between;
+}
+
+.question {
+  position: relative;
+}
+
+.question__comment {
+  display: none;
+  position: fixed;
+  @extend .u-transition;
+  background-color: rgba($blue-gray, .95);
+  padding: 30px 30px;
+  box-shadow: -2px -2px 8px rgba(black, .2);
+  bottom: -100%;
+  overflow-y: scroll;
+
+  @include breakpoint($medium-up) { padding: 50px 60px; }
+
+  @include breakpoint($large) {
+    margin: 0 25vw;
+    bottom: inherit;
+    top: 15vh;
+    min-height: 30vh;
+    max-height: 50vh;
+    max-width: 50vw;
+    padding: 50px 60px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(1);
+  }
+
+  h3, p {
+    max-width: calc(100vw - 120px);
+    font-family: $display-font;
+    color: white;
+  }
+  
+  h3 {
+    text-transform: uppercase;
+    i { 
+      float: right; 
+      cursor: pointer;
+    }
+  }
+  
+  p { font-weight: 200; }
+}
+
+.question__comment {
+  &.yes { background-color: rgba($green, .95); }
+  &.no { background-color: rgba($red, .95); }
+}
+
+.slick-current .question__comment { display: block; }
+
+.question__comment.js-active {
+  bottom: 0;
+  transition: all .5s ease;
+  @include breakpoint($large) {
+    bottom: inherit;
+    pointer-events: all;
+    opacity: 1;
+    transform: scale(1.1);
+    z-index: 1000;
+  }
+}
+
+.progress-bar {
+  height: 4px;
+  background-color: rgba(black, .2);
+  position: relative;
+
+  &__bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 4px;
+    @extend .u-transition;
+    background-color: $red;
+  }
+}
