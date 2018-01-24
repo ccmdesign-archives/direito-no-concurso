@@ -15,9 +15,17 @@ $blue: #00c8ff;
 // Colors 1
 $purple: #351330;
 $blue-gray: #424254;
-$green: #64908A;
-$beige: #E8CAA4;
-$red: #CC2A41;
+// $green: #64908A;
+// $beige: #E8CAA4;
+// $red: #CC2A41;
+
+// Colors 2
+$green: #7acbad;
+$beige: #dfe2b8;
+$yellow: #e1b866;
+$orange: #c05e3c;
+$gray: #3f434c;
+$red: #f3575e;
 
 
 $main-color: $red;
@@ -71,7 +79,8 @@ $display-font: "din-2014",sans-serif;
 @import "prose";
 @import "smartlinks";
 @import "box";
-@import "questionnaire";
+@import "questionnaire2";
+// @import "questionnaire";
 // @import "tags";
 // @import "card";
 // @import "custom";

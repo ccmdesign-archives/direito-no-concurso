@@ -25,32 +25,17 @@ body {
 }
 
 
-.top-bar {
-  padding: 20px;
-  background-color: $blue-gray;
+#overlay {
+  position: fixed;
+  background-color: rgba(yellow, .1);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
 
-  h1 {
-    margin: 0;
-    font-size: 1.4rem;
-    font-family: $display-font;
-    color: white;
-    font-weight: 300;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-  }
+  &.js-active { display: block; }
 }
-
-// #overlay {
-//   position: fixed;
-//   background-color: rgba(yellow, .1);
-//   top: 0;
-//   bottom: 0;
-//   left: 0;
-//   right: 0;
-//   display: none;
-
-//   &.js-active { display: block; }
-// }
 
 
 // TEMP SHIT

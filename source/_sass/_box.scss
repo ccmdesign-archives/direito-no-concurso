@@ -1,8 +1,10 @@
+
+
 .box {
   margin: 50px 0;
   padding: 30px;
-  background-color: rgba(black, .1);
-  border: 1px solid rgba(black, .3);
+  background-color: rgba($purple, .1);
+  border: 1px solid rgba($purple, .3);
   
   h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
@@ -14,7 +16,7 @@
     font-weight: 300;
     line-height: 1.43;
     font-size: 1.2rem;
-    color: rgba(black, .7);
+    color: rgba($purple, .7);
   }
 
   p + p {
@@ -28,3 +30,4 @@
 
   h1, h2, h3, h4, h5, h6 { color: $red; }
 }
+
