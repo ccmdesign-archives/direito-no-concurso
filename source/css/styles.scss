@@ -31,7 +31,6 @@ $red: #f3575e;
 $main-color: $red;
 $accent-color: $blue-gray;
 
-
 $body-font: "freight-text-pro",Georgia,Cambria,"Times New Roman",Times,serif;
 $display-font: "din-2014",sans-serif;
 
@@ -80,6 +79,7 @@ $display-font: "din-2014",sans-serif;
 @import "smartlinks";
 @import "box";
 @import "questionnaire2";
+@import "modal";
 // @import "questionnaire";
 // @import "tags";
 // @import "card";

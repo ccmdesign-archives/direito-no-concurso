@@ -1,0 +1,170 @@
+
+// // modal
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+}
+
+.modal__inner {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 34vh;
+  max-width: 800px;
+  width: 80vw;
+  height: 50vh;
+  box-shadow: 5px 5px 15px rgba(black, .2);
+  z-index: 101;
+  pointer-events: all; 
+
+  .button-next {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    background-color: $gray;
+    right: -20px;
+    bottom: 60px;
+    transform: rotate(45deg);
+    box-shadow: 5px 5px 15px rgba(black, .2);
+
+
+    .material-icons {
+      @extend .u-transition;
+      color: rgba(white, .3);
+      font-size: 6rem;
+      transform: rotate(-45deg);
+    }
+
+    &:hover {
+      .material-icons { color: white; }
+    }
+  }
+}
+
+.modal { 
+  // display: none;
+
+  &__inner {
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(1.2);
+    @extend .u-transition;  
+  }
+}
+
+.modal.js-active { 
+  // display: block;
+  
+  .modal__inner {
+    opacity: 1;
+    pointer-events: all;
+    transform: scale(1);
+    @extend .u-transition;  
+  }
+}
+
+// // result modal
+
+.result {
+  text-align: center;
+  background-color: white;
+  overflow: scroll;
+  width: 100%;
+  height: 50vh;
+  overflow-y: hidden;
+  
+  &__track {
+    @extend .u-transition;
+  }
+
+  &__content {
+    padding: 86px 60px;
+    height: 100%;
+
+    h2 {
+      text-transform: uppercase;
+      font-family: $display-font;
+      font-size: 3rem;
+      font-weight: 400;
+      color: white;
+      letter-spacing: 2px;
+      display: block;
+      margin-bottom: 40px;
+    }
+
+    > .material-icons {
+      font-size: 10rem;
+      color: white;
+      text-shadow: 3px 3px 15px rgba(black, .25);
+      margin-top: 20px;
+    }
+  }
+
+  .button--full {
+    margin-top: 30px;
+    width: 65%;
+    color: rgba($gray, .7);
+  }
+
+  &--correct { background-color: $green; }
+  &--incorrect { background-color: $red; }
+}
+
+.teacher-comment { 
+  height: 510px;
+  margin-top: 40px;
+  background-color: white; 
+  color: $gray;
+  text-align: left;
+  margin-left: 50px;
+  margin-right: 50px;
+  padding: 0 60px;
+  overflow-y: scroll;
+  border-top: 1px solid rgba($gray, .1);
+  border-bottom: 1px solid rgba($gray, .1);
+
+  h3 {
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+  }
+
+  h4 {
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 2rem;
+    position: relative;
+    
+    &:before {
+      @extend .u-material-icons;
+      font-size: 2.7rem;
+      position: absolute;
+      margin-left: -50px;
+      margin-top: 3px;
+      text-shadow: 1px 1px 4px rgba(black, .1);
+    }
+  }
+
+  &--correct h4 {
+    color: $green;
+    &:before { content: "check"; }
+  }
+}
+
+.result__track {
+  margin-top: 0;
+  @extend .u-transition;
+}
+
+.js-result.js-active {
+  margin-top: -600px;
+  @extend .u-transition;
+}
+

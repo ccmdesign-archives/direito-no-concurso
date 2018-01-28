@@ -39,14 +39,20 @@ $(document).ready(function () {
       return true;
   });
 
+
   $('.js-submit').click(function() {
-    $('.js-result').addClass('js-active');
     $('.js-modal').addClass('js-active');
     $('.js-overlay').addClass('js-active');
   });
   
   $('.js-overlay').click(function() {
-    $(this).removeClass('js-active');
+    $('.js-modal').removeClass('js-active'); // FIX ME!!!
+    $(this).removeClass('js-active'); // FIX ME!!!
     $('.js-result').removeClass('js-active');
   });
+
+  $('.js-comment-trigger').click(function() {
+    $('.js-result').addClass('js-active'); // FIX ME!!!
+  });
+
 }); // doc.ready
