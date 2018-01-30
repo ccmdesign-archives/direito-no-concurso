@@ -1,12 +1,13 @@
 
 # 1
-- question: 
-    title: 
-    description: >
-      Acerca do direito administrativo, julgue o item que se segue.
+- name: questao-1
+  id: 1
+  title: 
+  description: >
+    Acerca do direito administrativo, julgue o item que se segue.
       Conforme a doutrina, diferentemente do que ocorre no âmbito do direito privado, os costumes não constituem fonte do direito administrativo, visto que a administração pública deve obediência estrita ao princípio da legalidade.
   answer:
-    title: Errada
+    title: false
     description: >
       O costume é fonte de Direito em geral. Sendo a lei omissa, o juiz deve decidir de acordo com a analogia, os costumes e os princípios gerais de direito (art. 4.º da Lei de Introdução às Normas do Direito Brasileiro). 
       
@@ -36,61 +37,66 @@
   org: (CESPE/2017- Prefeitura de Fortaleza- procurador do Município)
 
 # 2
-- question:
-    title: 
-    description: >
-      Acerca do direito administrativo, julgue o item que se segue.
+- name: questao-2
+  id: 2
+  title: 
+  description: >
+    Acerca do direito administrativo, julgue o item que se segue.
 
-      A possibilidade de realização de obras para a passagem de cabos de energia elétrica sobre uma propriedade privada, a fim de beneficiar determinado bairro, expressa a concepção do regime jurídico-administrativo, o qual dá prerrogativas à administração para agir em prol da coletividade, ainda que contra os direitos individuais.
+    A possibilidade de realização de obras para a passagem de cabos de energia elétrica sobre uma propriedade privada, a fim de beneficiar determinado bairro, expressa a concepção do regime jurídico-administrativo, o qual dá prerrogativas à administração para agir em prol da coletividade, ainda que contra os direitos individuais.
   answer:
     title: Certa
     description: É essa a noção de Regime Jurídico Administrativo, que confere à Administração algumas prerrogativas, a fim de que ela possa atingir seus objetivos de satisfação do interesse público. Nessa hipótese ora analisada também incide o princípio da Supremacia do Interesse Público sobre o privado.
   org: (CESPE/2017- Prefeitura de Fortaleza- procurador do Município)
 
 # 3
-- question:
-    title: 
-    description: >
-      Acerca do direito administrativo, julgue o item que se segue.
-      
-      A regulação das relações jurídicas entre agentes públicos, entidades e órgãos estatais cabe ao direito administrativo, ao passo que a regulação das relações entre Estado e sociedade compete aos ramos do direito privado, que regulam, por exemplo, as ações judiciais de responsabilização civil do Estado.
+- name: questao-3
+  id: 3
+  title: 
+  description: >
+    Acerca do direito administrativo, julgue o item que se segue.
+    
+    A regulação das relações jurídicas entre agentes públicos, entidades e órgãos estatais cabe ao direito administrativo, ao passo que a regulação das relações entre Estado e sociedade compete aos ramos do direito privado, que regulam, por exemplo, as ações judiciais de responsabilização civil do Estado.
   answer:
-    title: Errada
+    title: false
     description: A reparação de danos e responsabilização do Estado se fazem através de Ações Judiciais com regras estabelecidas pelo direito público. A própria Constituição, norma Maior do direito público brasileiro, traça a regra da responsabilidade objetiva das pessoas jurídicas de direito público e das de direito privado prestadoras de serviços públicos, no Art. 37, §6º. 
   org: (CESPE/2017- Prefeitura de Fortaleza- procurador do Município)
 
 # 4
-- question:
-    title: 
-    description: >
-      Acerca da CF, julgue o item seguinte.
-      
-      Nos termos da CF, um ente federativo terá o direito de secessão, isto é, de desagregar-se da Federação, seja em caso de crise institucional, seja por decisão da população diretamente interessada, mediante plebiscito.
+- name: questao-4
+  id: 4
+  title: 
+  description: >
+    Acerca da CF, julgue o item seguinte.
+    
+    Nos termos da CF, um ente federativo terá o direito de secessão, isto é, de desagregar-se da Federação, seja em caso de crise institucional, seja por decisão da população diretamente interessada, mediante plebiscito.
   answer:
-    title: Errada
+    title: false
     description: Em uma federação (modelo adotado pelo Estado brasileiro) não há o direito de secessão, que é a separação de um dos entes federativos do todo.
   org: (CESPE/2017- Prefeitura de Fortaleza- procurador do Município)
 
 # 5
-- question:
-    title: 
-    description: >
-      Julgue o item a seguir com base na CF. 
-      
-      A pessoa jurídica de direito público responderá pelos danos que seu agente público causar a terceiros, sendo assegurado a ela o direito de regresso contra o servidor responsável apenas em caso de dolo.
+- name: questao-5
+  id: 5
+  title: 
+  description: >
+    Julgue o item a seguir com base na CF. 
+    
+    A pessoa jurídica de direito público responderá pelos danos que seu agente público causar a terceiros, sendo assegurado a ela o direito de regresso contra o servidor responsável apenas em caso de dolo.
   answer:
-    title: Errada
+    title: false
     description: A responsabilidade dos agentes públicos, nos moldes da CF/88, é subjetiva, se efetivando nos casos de dolo ou culpa, e não apenas dolo como afirma a questão.
   org: (CESPE/2017- Prefeitura de Fortaleza- procurador do Município)
 
 # 6
-- question:
-    title: 
-    description: >
-      Acerca de função administrativa e atos administrativos, julgue os itens a seguir.
-      
-      Em razão do princípio da indisponibilidade do interesse público, o Estado somente poderá exercer sua função administrativa sob o regime de direito público.
+- name: questao-6
+  id: 6
+  title: 
+  description: >
+    Acerca de função administrativa e atos administrativos, julgue os itens a seguir.
+    
+    Em razão do princípio da indisponibilidade do interesse público, o Estado somente poderá exercer sua função administrativa sob o regime de direito público.
   answer:
-    title: Errada
+    title: false
     description: Já vimos que há situações em que algumas normas de direito privado serão aplicáveis à atividade administrativa, como ocorre em relação às empresas públicas e Sociedades de Economia Mista. Vale conferir os artigos 173, da CF/88 e 54 da Lei 8.666/93
   org: (CESPE/2017- Prefeitura de Fortaleza- procurador do Município)

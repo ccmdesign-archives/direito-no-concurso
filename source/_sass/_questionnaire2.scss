@@ -16,25 +16,34 @@
 
   h1 {
     margin: 0;
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     font-family: $display-font;
     color: white;
     font-weight: 300;
     letter-spacing: 1px;
     text-transform: uppercase;
     text-align: center;
+    @include breakpoint($medium-up) {
+      font-size: 1.4rem;
+    }
 
     a {
-      padding: 15px 40px;
+      padding: 18px 40px;
       display: inline-block;
+      @include breakpoint($medium-up) { padding: 15px 40px; }
     }
   }
 }
 
 .wrapper {
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 20px;
+  margin-right: 20px;
+  
+  @include breakpoint($medium-up) {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
+  }
 }
 
 // question
@@ -44,10 +53,20 @@
   
   h2 { 
     text-transform: uppercase; 
-    font-size: 2rem;
+    font-size: 1.5rem;
+    
+    @include breakpoint($medium-up) {
+      font-size: 2rem;
+    }
   }
 
-  h3 { font-size: 1.4rem; }
+  h3 { 
+    font-size: 1.1rem;
+    @include breakpoint($medium-up) {
+      font-size: 1.4rem;
+    } 
+  }
+
   h4 { 
     font-size: 1.2rem; 
     text-transform: uppercase;
@@ -76,7 +95,15 @@
       margin: 0;
     }
 
-    small { font-size: 1rem; }
+    small { 
+      font-size: 1rem; 
+      @include breakpoint($small-only) {
+        font-size: .9rem; 
+        margin-top: 10px;
+        line-height: 1.4;
+        display: block;
+      }
+    }
   }
 
   &__content {
@@ -94,16 +121,26 @@
   @extend .wrapper;
   display: flex;
   flex-wrap: wrap;
+  
+  @include breakpoint($small-only) {
+    padding-bottom: 30px;
+  }
+
 
   .button { 
     flex: 1; 
     box-shadow: 2px 2px 10px rgba(black, .15);
   }
-  .button:first-of-type { margin-right: 40px; }
+
+  .button:first-of-type { margin-right: 14px; }  
+  
+  @include breakpoint($medium-up) {
+    .button:first-of-type { margin-right: 40px; }  
+  }
 
   .button--full {
-    margin-top: 30px;
     flex: 0 0 100%;
+    @include breakpoint($medium-up) {margin-top: 30px;}
   }
 }
 
@@ -128,18 +165,30 @@
 
 // answer buttons
 .answer-button {
-  margin-top: -70px;
-  padding: 40px 60px 40px 42px;
-  font-size: 1.8rem;
   background-color: white;
   box-shadow: 2px 2px 10px rgba(black, .15);
   font-weight: 300;
 
+  @include breakpoint($small-only) {
+    text-align: center;
+    margin-top: -55px;
+  }
+
+  @include breakpoint($medium-up) {
+    padding: 40px 60px 40px 42px;
+    font-size: 1.8rem;
+    margin-top: -70px;
+  }
+
   i { 
     float: none; 
     font-size: 3rem;
-    margin-right: 35px;
     margin-bottom: 5px;
+    @include breakpoint($small-only) { 
+      display: block; 
+      margin: 0 0 5px;
+    }
+    @include breakpoint($medium-up) { margin-right: 35px; }
   }
 
   &--correct { color: $green; }

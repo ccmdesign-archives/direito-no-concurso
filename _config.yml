@@ -30,6 +30,14 @@ plugins:
 source: ./source
 destination: _site/blu-lagum
 
+
+# Plugins
+page_gen:
+  - data: questoes
+    template: exercicios
+    name: name
+    dir: questoes
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.

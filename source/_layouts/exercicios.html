@@ -1,0 +1,90 @@
+---
+layout: default
+title: questionnaire2
+---
+
+<header class="top-bar">
+  <span class="top-bar__button"><i class="material-icons">menu</i></span>
+  <h1 class="top-bar__title"><a href="./">concursosdireito</a></h1>
+  <span class="top-bar__button"><i class="material-icons">person</i></span>
+</header>
+
+<article class="question">
+
+  <section class="question__header">
+    <hgroup class="wrapper">
+      <h2>Direito Administrativo</h2>
+      <h3>Estado, Governo e Administração Pública</h3>
+      <small class="question__source">CESPE/2017- Prefeitura de Fortaleza- procurador do Município</small>
+    </hgroup>
+    <div class="progress">
+      <a href="#" class="progress__bar progress--correct"></a>
+      <a href="#" class="progress__bar progress--incorrect"></a>
+      <a href="#" class="progress__bar progress--correct"></a>
+      <a href="#" class="progress__bar"></a>
+      <a href="#" class="progress__bar"></a>
+      <a href="#" class="progress__bar"></a>
+      <a href="#" class="progress__bar"></a>
+    </div>
+  </section>
+  
+  <section class="question__content">
+    <div class="wrapper">
+      <h4>Questão {{page.id}}</h4>
+      <div>
+        {{page.description | markdownify }}
+      </div>
+    </div>
+  </section>
+
+  <section class="question-controls">
+    <input type="radio" name="answers" id="answer-correct">
+    <label for="answer-correct" class="button answer-button answer-button--correct"><i class="material-icons">check</i>Certa</label>
+    <input type="radio" name="answers" id="answer-incorrect">
+    <label for="answer-incorrect" class="button answer-button answer-button--incorrect"><i class="material-icons">close</i>Errada</label>
+    <span class="button button--full js-submit">Responder</span>
+  </section>
+
+  <div class="modal js-modal">
+    <div class="modal__inner modal--result">
+      <div class="result">
+        <div class="result__track js-result">
+          <!-- Need some JS love here -->
+          <section class="result__content result--correct">
+            <i class="material-icons">check</i>
+            <h2>Acertou!</h2>
+            <span class="button button--full js-comment-trigger">cometário do professor</span> 
+            <a class="button button--full mobile-only" href="./questao-{{page.id | plus: 1}}.html">Próxima</a>
+          </section>
+
+          <section class="result__content result--incorrect js-result">
+            <i class="material-icons">close</i>
+            <h2>Oops! Resposta Errada</h2>
+            <span class="button button--full js-comment-trigger">cometário do professor</span>
+            <a class="button button--full mobile-only" href="./questao-{{page.id | plus: 1}}.html">Próxima</a>
+          </section>
+          <!-- Need some JS love here -->
+
+
+          <section class="result__content result--comment js-comment teacher-comment teacher-comment--{% if page.answer.title %}correct{% else %}incorrect{% endif %}">
+            <h3>Comentário do Professor</h3>
+            {% if page.answer.title %}
+            <h4>Afirmativa Correta</h4>
+            {% else %}
+            <h4>Afirmativa Incorreta</h4>
+            {% endif %}
+            
+            <div>{{ page.answer.description | markdownify }}</div>
+
+            <a class="button button--full mobile-only" href="./questao-{{page.id | plus: 1}}.html">Próxima</a>
+          </section>
+        </div>
+        <a class="button-next" href="./questao-{{page.id | plus: 1}}.html"><i class="material-icons">arrow_forward</i></a>
+      
+      </div>
+    </div>
+    
+  </div>
+
+  
+</article>
