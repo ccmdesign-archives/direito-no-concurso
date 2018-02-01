@@ -28,7 +28,7 @@ plugins:
 
 # Folder Structure
 source: ./source
-destination: _site/blu-lagum
+destination: _site/
 
 
 # Plugins
