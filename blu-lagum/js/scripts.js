@@ -40,50 +40,19 @@ $(document).ready(function () {
   });
 
 
-  $('.js-slider').slick({
-    speed: 300,
-    slidesToShow: 1,
-    accessibility: true,
-    adaptiveHeight: true,
-    infinite: false,
-    prevArrow: $('.controls--prev'), 
-    nextArrow: $('.controls--next')  
-  });
-
-
-  // FIX ME: not working properly.
-  // Progressbar for the questionnaire. This is plugged to the slick slider.
-
-  $('.js-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-    var slides = $('.slick-slide');
-    var slides_length = parseInt(slides.last()[0].getAttribute('data-slick-index'));
-    var slide_current = parseInt($('.slick-current').attr('data-slick-index')) + 1;
-
-    var progress = Math.round(slide_current / slides_length * 100);
-
-    $(".js-progress").width(progress + '%');
-  });
-
-  
-  $('.js-close-comment').click(function() {
-    $('.js-comment').removeClass('js-active');
-    $('.js-overlay').removeClass('js-active');
-  });
-
-  $('.js-open-comment').click(function() {
-    $('.js-comment').addClass('js-active');
+  $('.js-submit').click(function() {
+    $('.js-modal').addClass('js-active');
     $('.js-overlay').addClass('js-active');
   });
   
-  $('.js-answer').click(function() {
-    $(this).toggleClass('js-active');
-  });
-  
   $('.js-overlay').click(function() {
-    $(this).removeClass('js-active');
-    $('.js-comment').removeClass('js-active');
-
+    $('.js-modal').removeClass('js-active'); // FIX ME!!!
+    $(this).removeClass('js-active'); // FIX ME!!!
+    $('.js-result').removeClass('js-active');
   });
 
+  $('.js-comment-trigger').click(function() {
+    $('.js-result').addClass('js-active'); // FIX ME!!!
+  });
 
 }); // doc.ready
