@@ -1,0 +1,49 @@
+---
+layout: default
+---
+
+<!-- 
+materia: materia
+title: course-title
+prof: name
+cover_image: jpg-file
+prev: html-file
+next: html-file
+smartlinks:
+  - content
+ -->
+
+<main role="main">
+
+<article class="prose">
+  <header style="background-image: url({{ site.baseurl }}/images/{{page.cover_image}})">
+    <div class="header__content" >
+      <h2><span>{{ page.materia }}</span></h2>
+      <h1>{{ page.title }}</h1>
+      <h3 class="authors"><span>{{page.prof}}</span></h3>
+    </div>
+  </header>
+  <div class="smartlink-anchor">
+    <div class="prose__content">
+      {{ content }}
+    </div>
+
+      <!-- Links -->
+      <aside class="smartlink-wrapper">
+      <ol class="footnotes">
+        {% for i in page.smartlinks %}
+        <li class="smartlink-content smartlink-content--00{{forloop.index}}">
+          <p>{{ i }}</p>
+        </li>
+        {% endfor %}
+      </ol>
+    </aside>
+  </div>
+  <footer class="prose__controls">
+    <div class="prose__content">
+      <a href="{{ site.baseurl }}/aulas/{{ page.prev }}" class="button button--prev {% unless page.prev %}button--disabled{% endunless %}">Anterior</a>
+      <a href="{{ site.baseurl }}/aulas/{{ page.next }}" class="button button--next {% unless page.next %}button--disabled{% endunless %}">Próximo</a>
+    </div>
+  </footer>
+
+</article>
