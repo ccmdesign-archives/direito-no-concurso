@@ -1,0 +1,50 @@
+---
+layout: default
+title: Concursos
+---
+
+<main role="main" class="main-list"> <!-- main content starts here -->
+
+<aside class="main-list__sidebar">
+  <h2>Filtros</h2>
+  <div class="filters">
+    <ul>
+      <li><input class="filters__search search" type="text" placeholder="Busca"></li>
+      {% for i in site.data.filtros %}
+      <li>
+        <div class="checkbox">
+          <input id="{{forloop.index}}" type="checkbox">
+          <label for="{{forloop.index}}" title="Checkbox Example"><input type="text" placeholder="{{i.filter}}"></label>
+        </div>
+      </li>
+      {% endfor %} 
+      <li><div class="button button--full">Filtrar</div></li>   
+    </ul>
+  </div>
+</aside>
+
+<article class="main-list__main">
+  <h1 class="main-list__header">Apostilas</h1>
+  <ul class="card-list">
+  {% for i in site.data.apostilas %}
+    <li class="card">
+      <header class="card__header" style="background-image: url( {{ '/images' | relative_url }}/{{i.image}} );">
+      <!-- <header class="card__header" style="background-image: url( {{ '/images/hunters-race-408744.jpg' | relative_url }} );"> -->
+        <h2>{{ i.materia }}</h2>
+        <h1>{{ i.titulo }}</h1>
+        <h3>{{ i.professor }}</h3>
+      </header>
+      <section class="card__content">
+        <p>{{i.descricao}}</p>
+      </section>
+      <footer class="card__controls">
+        <a href="{{ 'aula-01-01.html' | relative_url }}" class="card__button button">Estudar</a>  
+      </footer>
+      
+    </li>
+  {% endfor %}
+  </table>
+</article>
+
+</main>
+
