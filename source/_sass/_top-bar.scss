@@ -1,0 +1,38 @@
+.top-bar {
+  display: flex;
+  position: relative;
+  z-index: 1;
+  &__button { flex: 0; }
+  &__title { flex: 1; }
+}
+
+.top-bar__button {
+  padding: 17px 20px;
+  background-color: rgba(white, .05);
+  color: white;
+}
+
+.top-bar {
+  background-color: $blue-gray;
+  box-shadow: 2px 2px 12px rgba(black, .25);
+
+  h1 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-family: $display-font;
+    color: white;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+    @include breakpoint($medium-up) {
+      font-size: 1.4rem;
+    }
+
+    a {
+      padding: 18px 40px;
+      display: inline-block;
+      @include breakpoint($medium-up) { padding: 15px 40px; }
+    }
+  }
+}

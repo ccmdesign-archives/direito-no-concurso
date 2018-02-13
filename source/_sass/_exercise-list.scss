@@ -1,0 +1,195 @@
+.main-list {
+  display: flex;
+  height: calc(100vh - 66px);
+  
+  &__sidebar,
+  &__main {
+    
+  }
+
+  &__sidebar {
+    width: 22%;
+    min-width: 150px;
+    max-width: 350px;
+    height: calc(100vh - 66px);
+    // background-color: lighten($blue-gray, 65);
+    background-color: $green;
+    box-shadow: 2px 2px 20px rgba(black, .1);
+    padding: 0 20px;
+    position: relative;
+  }
+
+  &__main { 
+    flex: 1;
+    overflow-y: scroll;
+  }
+}
+
+.filters {
+  width: 100%;
+  font-family: $display-font;
+  font-weight: 300;
+  
+  &, ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    list-style: none;
+    border-bottom: 1px solid rgba($blue-gray, .1);
+  }
+
+  &__search {
+    background-color: transparent !important;
+    border: 1px solid rgba(white, .4) !important;
+    color: white;
+    &:focus { border-color: white !important; }
+
+    &::-webkit-input-placeholder { color: white; }
+    &:-moz-placeholder { color: white; } /* Firefox 18- */
+    &::-moz-placeholder { color: white; } /* Firefox 19+ */
+    &:-ms-input-placeholder { color: white; }
+  }
+
+  .button--full { width: 100%; }
+
+  .checkbox {
+    padding: 5px 0;
+    margin: 0;
+
+    input[type="checkbox"] + label:before {
+      vertical-align: -5px;
+      margin-right: 0px;
+      padding: 12px 12px 13px;
+      color: rgba($blue-gray, .4);
+    }
+
+    input[type="checkbox"] + label:before {
+      @extend .u-material-icons;
+      content: 'check_box_outline_blank';
+    }
+
+    input[type="checkbox"]:checked + label:before {
+      @extend .u-material-icons;
+      content: 'check_box';
+      color: rgba($gray, 1);
+    }
+
+    label { display: flex; }
+    label:before { flex: 0; }
+
+    input[type="text"] {
+      margin-bottom: 0;
+      background-color: transparent;
+      flex: 1;
+      padding: 11px;
+      color: white;
+
+      &:focus { border-color: transparent !important; }
+
+      &::-webkit-input-placeholder { color: white; }
+      &:-moz-placeholder { color: white; } /* Firefox 18- */
+      &::-moz-placeholder { color: white; } /* Firefox 19+ */
+      &:-ms-input-placeholder { color: white; }
+    }
+  }
+}
+
+.main-list {
+  h1, h2 {
+    font-family: $display-font;
+    font-weight: 100;  
+  }
+
+  h1 {
+    margin-left: 60px;
+  }
+
+  aside {
+    h2 {
+      padding-left: 15px;
+      font-size: 1.4rem;
+      margin-top: 33px;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.exercise-list {
+  width: 100%;
+  margin: 0;
+  font-family: $display-font;
+  text-align: left;
+  font-weight: 300;
+  border-collapse: collapse;
+  color: $blue-gray;
+  font-size: 1.1rem;
+
+  td, th {
+    padding: 10px 20px;
+  }
+
+  th {
+    font-weight: 400;
+    background-color: $blue-gray;
+    color: white;
+    padding: 10px 20px;
+  }
+
+  td:first-child,
+  th:first-child { padding-left: 60px; }
+
+  td:last-child,
+  th:last-child { 
+    padding-right: 20px;
+  }
+
+  td:nth-last-child(2) {
+    // padding: 0;
+    text-align: right;
+  }
+
+  tr:nth-child(even) { background-color: rgba($blue-gray, .05); }
+
+  .button {
+    padding: 14px 12px 12px;
+    background-color: rgba($green, .3);
+    border: 0;
+    color: white;
+
+
+    .material-icons {
+      padding-left: 10px;
+      margin-top: -2px;
+      padding-bottom: 2px;
+    }
+
+    &:hover {
+      background-color: rgba($green, 1);
+    }
+  }
+
+  &__questions-status {
+    min-width: 80px;
+  }
+
+
+
+}
+
+.questions-status {
+  width: 100%;
+  background-color: rgba(black, .2);
+  height: 10px;
+  position: relative;
+
+  &__bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: $green;
+  }
+}

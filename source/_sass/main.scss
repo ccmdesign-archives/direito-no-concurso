@@ -35,20 +35,6 @@ body {
   &.js-active { display: block; }
 }
 
-
-// TEMP SHIT
-.temp-index {
-  text-align: center;
-  padding: 50px;
-
-  .button {
-    font-size: 3rem;
-    padding: 50px;
-    display: block;
-    margin-bottom: 30px;
-  }
-}
-
 // I WIN!!!!
 .mobile-only {
   @include breakpoint($medium-up) { display: none !important; }

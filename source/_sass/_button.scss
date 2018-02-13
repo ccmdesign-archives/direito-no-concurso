@@ -9,6 +9,7 @@
     font-size: 1.1rem;
     font-family: $display-font;
     border: 1px solid currentColor;
+    font-weight: 400;
 
     @extend .u-transition;
 
@@ -18,9 +19,7 @@
     }
 
     i {
-      margin-left: 15px;
       vertical-align: middle;
-      float: right;
     }
 }
 
@@ -46,7 +45,26 @@
 
 .button--large { font-size: 2.3rem; }
 
+.button--prev:before {
+  @extend .u-material-icons;
+  content: 'arrow_back';
+  margin-right: 15px;
+  margin-top: -2px;
+  vertical-align: middle;
+}
 
+.button--next:after {
+  @extend .u-material-icons;
+  content: 'arrow_forward';
+  margin-left: 15px;
+  margin-top: -2px;
+  vertical-align: middle;
+}
+
+.button--full {
+  font-weight: 400;
+  text-align: center;
+}
 
 // .button {
 //   display: block;

@@ -3,11 +3,51 @@ layout: default
 title: Concursos
 ---
 
-<main role="main" class="temp-index"> <!-- main content starts here -->
+<main role="main" class="main-list"> <!-- main content starts here -->
 
+<aside class="main-list__sidebar">
+  <h2>Filtros</h2>
+  <div class="filters">
+    <ul>
+      <li><input class="filters__search search" type="text" placeholder="Busca"></li>
+      {% for i in site.data.filtros %}
+      <li>
+        <div class="checkbox">
+          <input id="{{forloop.index}}" type="checkbox">
+          <label for="{{forloop.index}}" title="Checkbox Example"><input type="text" placeholder="{{i.filter}}"></label>
+        </div>
+      </li>
+      {% endfor %} 
+      <li><div class="button button--full">Filtrar</div></li>   
+    </ul>
+  </div>
+</aside>
 
-<a href="{{ "aula-01-01.html" | relative_url }}" class="button">Apostila</a>
-<a class="button" href="./questoes/questao-1.html">Questao 1</a> 
-
+<article class="main-list__main">
+  <h1 class="main-list__header">Exercicios</h1>
+  <table class="exercise-list">
+    <thead>
+      <th>Exercício</th>
+      <th>Materia</th>
+      <th>Banca</th>
+      <th>Desempenho</th>
+      <th>Ano</th>
+      <th></th>
+      <th></th>
+    </thead>
+  {% for i in (1..120) %}
+    <tr>
+      <td>Conhecimentos básicos</td>
+      <td>Direito Administrativo</td>
+      <td>CESPE</td>
+      <td class="exercise-list__questions-status"><div class="questions-status" data-status="3-6"><span class="questions-status__bar" style="width: 33%;"></span></div></td>
+      <td>2017</td>
+      <td><a href="#" class="button">Entrar<i class="material-icons">arrow_forward</i></a></td>
+      <td></td>
+    </tr>
+  {% endfor %}
+  </table>
+</article>
 
 </main>
+
