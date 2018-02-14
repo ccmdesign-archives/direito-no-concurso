@@ -26,19 +26,19 @@ title: Concursos
 <article class="main-list__main">
   <h1 class="main-list__header">Apostilas</h1>
   <ul class="card-list">
-  {% for i in site.data.apostilas %}
+  {% for i in site.aulas %}
     <li class="card">
-      <header class="card__header" style="background-image: url( {{ '/images' | relative_url }}/{{i.image}} );">
+      <header class="card__header" style="background-image: url( {{ '/images' | relative_url }}/{{i.cover_image}} );">
       <!-- <header class="card__header" style="background-image: url( {{ '/images/hunters-race-408744.jpg' | relative_url }} );"> -->
         <h2>{{ i.materia }}</h2>
-        <h1>{{ i.titulo }}</h1>
-        <h3>{{ i.professor }}</h3>
+        <h1>{{ i.title }}</h1>
+        <h3>{{ i.prof }}</h3>
       </header>
       <section class="card__content">
-        <p>{{i.descricao}}</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis omnis, repellat molestiae odit culpa tempora deleniti iure, sed numquam soluta ab nisi inventore ex, quod cupiditate? Ad tenetur consectetur incidunt?</p>
       </section>
       <footer class="card__controls">
-        <a href="{{ 'aula-01-01.html' | relative_url }}" class="card__button button">Estudar</a>  
+        <a href="{{ i.url | relative_url }}" class="card__button button">Estudar</a>  
       </footer>
       
     </li>

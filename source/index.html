@@ -3,9 +3,10 @@ layout: default
 title: Concursos
 ---
 
-<main role="main" class="temp-index"> <!-- main content starts here -->
-
-<a href="{{ lista-exercicios.html | relative_url }}" class="button">Exercicios</a>
-<a href="{{ apostilas.html | relative_url }}" class="button">Apostilas</a>
-
+<main role="main"> <!-- main content starts here -->
+{% for item in site.aulas %}
+  <h2>{{ item.title }}</h2>
+  <p>{{ item.materia }}</p>
+  <p><a href="{{ item.url | relative_url }}">{{ item.title }}</a></p>
+{% endfor %}
 </main>

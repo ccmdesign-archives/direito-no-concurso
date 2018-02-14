@@ -30,6 +30,11 @@ plugins:
 source: ./source
 destination: _site/
 
+collections:
+  aulas:
+    output: true
+    permalink: /:collection/:name
+
 
 # Plugins
 page_gen:
