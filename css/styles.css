@@ -10,7 +10,7 @@
 .radio input[type="checkbox"] + label:before, .checkbox input[type="checkbox"]:checked + label:before,
 .radio input[type="checkbox"]:checked + label:before, .checkbox input[type="radio"] + label:before,
 .radio input[type="radio"] + label:before, .checkbox input[type="radio"]:checked + label:before,
-.radio input[type="radio"]:checked + label:before, .select::before, .button--prev:before, .button--next:after, .smartlink:before, .teacher-comment h4:before, .filters .checkbox input[type="checkbox"] + label:before, .filters .checkbox input[type="checkbox"]:checked + label:before {
+.radio input[type="radio"]:checked + label:before, .select::before, .button--prev:before, .button--next:after, .smartlink:before, .box:before, .prose blockquote:before, .teacher-comment h4:before, .filters .checkbox input[type="checkbox"] + label:before, .filters .checkbox input[type="checkbox"]:checked + label:before {
   font-family: 'Material Icons';
   font-weight: normal;
   font-style: normal;
@@ -481,33 +481,46 @@ input[type="submit"], input[type="file"] {
   .authors sup {
     font-size: .9rem; }
 
+.prose pre {
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 10px 20px; }
+.prose code {
+  padding: 0; }
+
 .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
   font-family: "din-2014", sans-serif;
-  margin: 0; }
+  margin: 0 0 10px 0;
+  font-weight: 300; }
+  @media (min-width: 40.063em) {
+    .prose h1:not(:first-child), .prose h2:not(:first-child), .prose h3:not(:first-child), .prose h4:not(:first-child), .prose h5:not(:first-child), .prose h6:not(:first-child) {
+      margin-top: 60px; } }
 .prose h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 100;
-  margin-bottom: 10px;
   color: #f3575e; }
-  @media (min-width: 40.063em) {
-    .prose h1 {
-      margin-top: 60px; } }
 .prose h2 {
-  font-weight: 300;
-  font-size: 2rem;
-  margin-bottom: 10px;
+  font-size: 2.4rem;
   color: #f3575e; }
-  @media (min-width: 40.063em) {
-    .prose h2 {
-      margin-top: 60px; } }
 .prose h3 {
-  font-weight: 400;
-  font-size: 1.4rem;
-  margin-bottom: 10px;
+  font-size: 2rem;
+  color: #00a8d6;
+  text-transform: uppercase; }
+.prose h4 {
+  font-size: 1.6rem;
   color: #00a8d6; }
-  @media (min-width: 40.063em) {
-    .prose h3 {
-      margin-top: 60px; } }
+.prose h5 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.5); }
+.prose h6 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.8); }
+.prose hr {
+  border: 0;
+  border-bottom: 1px solid rgba(243, 87, 94, 0.6);
+  margin: 60px 0; }
 .prose p, .prose li, .prose blockquote {
   line-height: 1.8;
   margin-bottom: .65rem;
@@ -522,11 +535,6 @@ input[type="submit"], input[type="file"] {
     font-size: .8rem; }
   .prose p strong, .prose li strong, .prose blockquote strong {
     color: #333; }
-.prose blockquote {
-  border: 1px solid #00c8ff;
-  padding: 20px 30px;
-  margin: 30px 0;
-  background-color: rgba(0, 200, 255, 0.1); }
 .prose .intro {
   font-size: 2rem; }
 
@@ -597,28 +605,80 @@ input[type="submit"], input[type="file"] {
     color: rgba(0, 0, 0, 0.5);
     font-size: .9rem; }
 
-.box {
+.box, .prose blockquote {
   margin: 50px 0;
-  padding: 30px;
+  padding: 30px 30px 30px 50px;
   background-color: rgba(53, 19, 48, 0.1);
-  border: 1px solid rgba(53, 19, 48, 0.3); }
-  .box h1, .box h2, .box h3, .box h4, .box h5, .box h6 {
+  border: 1px solid #351330;
+  border-left-width: 6px;
+  position: relative; }
+  .box h1, .prose blockquote h1, .box h2, .prose blockquote h2, .box h3, .prose blockquote h3, .box h4, .prose blockquote h4, .box h5, .prose blockquote h5, .box h6, .prose blockquote h6 {
     margin-top: 0; }
-  .box p {
+  .box h2, .prose blockquote h2 {
+    font-size: 1.8rem;
+    font-weight: 400; }
+  .box p, .prose blockquote p {
     margin: 0;
     font-family: "din-2014", sans-serif;
     font-weight: 300;
     line-height: 1.43;
     font-size: 1.2rem;
     color: rgba(53, 19, 48, 0.7); }
-  .box p + p {
+  .box p + p, .prose blockquote p + p {
     margin-top: 10px; }
+  .box:before, .prose blockquote:before {
+    position: absolute;
+    color: white;
+    border-radius: 50%;
+    padding: 0;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    left: -30px;
+    background-color: #351330;
+    line-height: 48px;
+    content: "error_outline";
+    font-size: 2.6rem; }
 
 .box--atencao {
   background-color: rgba(243, 87, 94, 0.1);
-  border-color: rgba(243, 87, 94, 0.2); }
+  border-color: #f3575e; }
   .box--atencao h1, .box--atencao h2, .box--atencao h3, .box--atencao h4, .box--atencao h5, .box--atencao h6 {
     color: #f3575e; }
+  .box--atencao:before {
+    background-color: #f3575e;
+    content: "error_outline"; }
+
+.box--quote, .prose blockquote {
+  border-color: #00c8ff;
+  background-color: rgba(0, 200, 255, 0.1); }
+  .box--quote h1, .prose blockquote h1, .box--quote h2, .prose blockquote h2, .box--quote h3, .prose blockquote h3, .box--quote h4, .prose blockquote h4, .box--quote h5, .prose blockquote h5, .box--quote h6, .prose blockquote h6 {
+    color: #00a0cc !important; }
+  .box--quote:before, .prose blockquote:before {
+    background-color: #00c8ff;
+    content: "format_quote"; }
+
+.box--artigo {
+  border-color: #351330;
+  background-color: rgba(53, 19, 48, 0.1); }
+  .box--artigo h1, .box--artigo h2, .box--artigo h3, .box--artigo h4, .box--artigo h5, .box--artigo h6 {
+    color: #351330; }
+  .box--artigo:before {
+    background-color: #351330;
+    line-height: 48px;
+    font-size: 1.8rem;
+    text-indent: 4px;
+    content: "gavel"; }
+
+.box--exemplo {
+  border-color: #7acbad;
+  background-color: rgba(122, 203, 173, 0.1); }
+  .box--exemplo h1, .box--exemplo h2, .box--exemplo h3, .box--exemplo h4, .box--exemplo h5, .box--exemplo h6 {
+    color: #7acbad; }
+  .box--exemplo:before {
+    background-color: #7acbad;
+    line-height: 48px;
+    content: "grade"; }
 
 .wrapper, .question-controls {
   margin-left: 20px;

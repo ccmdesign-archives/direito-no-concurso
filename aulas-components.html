@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Styleguide Aulas</title>
+    <link rel="stylesheet" href="/blu-lagum/css/styles.css">
+    <link rel="stylesheet" href="/blu-lagum/vendor/slick.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/aou0hyh.css">
+  </head>
+  
+  <body class="">
+    <header class="top-bar">
+      <span class="top-bar__button"><i class="material-icons">menu</i></span>
+      <h1 class="top-bar__title"><a href="/blu-lagum/index.html">estudando direito</a></h1>
+      <span class="top-bar__button"><i class="material-icons">person</i></span>
+    </header>
+    <div id="overlay" class="js-overlay"></div>
+
+    <!-- 
+materia: materia
+title: course-title
+prof: name
+cover_image: jpg-file
+prev: html-file
+next: html-file
+smartlinks:
+  - content
+ -->
+
+<main role="main">
+
+<article class="prose">
+  
+  <header style="background-image: url(/blu-lagum/images/hunters-race-408744.jpg)">
+    <div class="header__content" >
+      <h2><span>Nome da Matéria</span></h2>
+      <h1><span>Styleguide das Aulas</span></h1>
+      <h3 class="authors"><span>Nome do Professor</span></h3>
+    </div>
+  </header>
+  
+  <div class="smartlink-anchor">
+    <div class="prose__content">
+      <!-- 
+materia: materia
+title: course-title
+prof: name
+cover_image: jpg-file
+prev: html-file
+next: html-file
+smartlinks:
+  - content
+ -->
+  
+<section id="styleguide-headings" class="prose__section">
+  <h1>Styleguide Headings</h1>
+  <p class="intro">Nesta página temos os componentes do módulo das aulas. Cada elemento na página, é indicado com o seu código logo depois no box cinza.</p>
+  <pre><code>p.intro</code></pre>
+  <hr>
+  <pre><code>  &lt;hr&gt;</code></pre>
+  <h1>Heading 1</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, nemo facilis illum quos, facere harum incidunt magni laudantium aliquam dicta aliquid blanditiis nobis perferendis soluta atque! Inventore eos non, officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  <pre><code>  h1 + p</code></pre>
+  <h2>Heading 2</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, nemo facilis illum quos, facere harum incidunt magni laudantium aliquam dicta aliquid blanditiis nobis perferendis soluta atque! Inventore eos non, officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  <pre><code>  h2 + p</code></pre>
+  <h3>Heading 3</h3>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, nemo facilis illum quos, facere harum incidunt magni laudantium aliquam dicta aliquid blanditiis nobis perferendis soluta atque! Inventore eos non, officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  <pre><code>  h3 + p</code></pre>
+  <h4>Heading 4</h4>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, nemo facilis illum quos, facere harum incidunt magni laudantium aliquam dicta aliquid blanditiis nobis perferendis soluta atque! Inventore eos non, officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  <pre><code>  h4 + p</code></pre>
+  <h5>Heading 5</h5>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, nemo facilis illum quos, facere harum incidunt magni laudantium aliquam dicta aliquid blanditiis nobis perferendis soluta atque! Inventore eos non, officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  <pre><code>  h5 + p</code></pre>
+  <h6>Heading 6</h6>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, nemo facilis illum quos, facere harum incidunt magni laudantium aliquam dicta aliquid blanditiis nobis perferendis soluta atque! Inventore eos non, officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  <pre><code>  h6 + p</code></pre>
+</section>
+<pre><code>section.prose__section</code></pre>
+
+<section id="styleguide-boxes" class="prose__section">
+  <h1>Boxes</h1>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat repudiandae, consequuntur a nesciunt ratione possimus, deleniti, temporibus voluptatibus dolorum sit, soluta aperiam voluptatem. Tempora veritatis saepe, unde reiciendis, soluta deserunt.</p>
+  <div class="box box--quote">
+    <h2>Box Quote</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima ipsam, facere expedita, optio atque dignissimos et sequi ratione in veniam provident dolorem vero cupiditate dolor quaerat earum natus magnam architecto. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga ea quis recusandae aliquid magni odio nostrum, eos dignissimos itaque sunt illum eaque ipsum ipsa nobis! Illum perferendis at debitis consequuntur!</p>
+  </div>
+
+  <pre><code>
+  .box.box--quote > h2 + p
+  blockquote > h2 + p
+  </code></pre>
+
+<div class="box box--atencao">
+  <h2>Box Atencao</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima ipsam, facere expedita, optio atque dignissimos et sequi ratione in veniam provident dolorem vero cupiditate dolor quaerat earum natus magnam architecto. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga ea quis recusandae aliquid magni odio nostrum, eos dignissimos itaque sunt illum eaque ipsum ipsa nobis! Illum perferendis at debitis consequuntur!</p>
+</div>
+
+  <pre><code>
+  .box.box--atencao > h2 + p
+  </code></pre>
+
+<div class="box box--artigo">
+  <p><strong>Art.</strong> 1º A República Federativa do Brasil, formada pela união indissolúvel dos Estados e Municípios e do Distrito Federal, constitui-se em Estado Democrático de Direito e tem como fundamentos:</p>
+  <p>I–a soberania;</p>
+  <p>II–a cidadania</p>
+  <p>III–a dignidade da pessoa humana;</p>
+  <p>IV–os valores sociais do trabalho e da livre iniciativa;</p>
+  <p>V–o pluralismo político.</p>
+  <p>Parágrafo único. Todo o poder emana do povo, que o exerce por meio de representantes eleitos ou diretamente, nos termos desta Constituição.</p>
+</div>
+
+<pre><code>  .box.box--artigo</code></pre>
+  
+<div class="box box--exemplo">
+  <h2>Box Exemplo</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima ipsam, facere expedita, optio atque dignissimos et sequi ratione in veniam provident dolorem vero cupiditate dolor quaerat earum natus magnam architecto. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga ea quis recusandae aliquid magni odio nostrum, eos dignissimos itaque sunt illum eaque ipsum ipsa nobis! Illum perferendis at debitis consequuntur!</p>
+</div>
+
+<pre><code>  .box.box--exemplo</code></pre>
+    </div>
+
+      <!-- Links -->
+    <aside class="smartlink-wrapper">
+      <ol class="footnotes">
+        
+      </ol>
+    </aside>
+  </div>
+
+  <footer class="prose__controls">
+    <div class="prose__content">
+      <a href="/blu-lagum/aulas/" class="button button--prev button--disabled">Anterior</a>
+      <a href="/blu-lagum/aulas/proxima-parte da aula" class="button button--next button--disabled">Próximo</a>
+    </div>
+  </footer>
+
+</article>
+
+    
+    <script src="/blu-lagum/vendor/jquery-2.1.4.min.js"></script>
+    <script src="/blu-lagum/js/scripts.js"></script>
+
+  </body>
+</html>
