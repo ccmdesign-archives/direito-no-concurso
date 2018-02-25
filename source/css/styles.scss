@@ -15,9 +15,6 @@ $blue: #00c8ff;
 // Colors 1
 $purple: #351330;
 $blue-gray: #424254;
-// $green: #64908A;
-// $beige: #E8CAA4;
-// $red: #CC2A41;
 
 // Colors 2
 $green: #7acbad;
@@ -34,6 +31,10 @@ $accent-color: $blue-gray;
 $body-font: "freight-text-pro",Georgia,Cambria,"Times New Roman",Times,serif;
 $display-font: "din-2014",sans-serif;
 
+
+// Aos poucos vou substitundo as variáveis do sass
+
+// Native CCS Variables
 
 .clearfix:after {
    content: " "; /* Older browser do not support empty content */
