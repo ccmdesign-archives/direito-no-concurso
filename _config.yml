@@ -38,18 +38,18 @@ defaults:
       layout: aula_template
 
 
-collections:
-  aulas:
-    output: true
-    permalink: :collection/:title
+# collections:
+#   aulas:
+#     output: true
+#     permalink: :collection/:title
 
 
 # Plugins
-page_gen:
-  - data: questoes
-    template: exercicios
-    name: name
-    dir: questoes
+# page_gen:
+#   - data: questoes
+#     template: exercicios
+#     name: name
+#     dir: questoes
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
