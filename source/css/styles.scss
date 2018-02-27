@@ -17,8 +17,9 @@ $purple: #351330;
 $blue-gray: #424254;
 
 // Colors 2
-$green: #7acbad;
-$beige: #dfe2b8;
+// $green: #7acbad;
+$green: #379f8d;
+$beige: #e7d7bf;
 $yellow: #e1b866;
 $orange: #c05e3c;
 $gray: #3f434c;
@@ -74,16 +75,18 @@ $display-font: "din-2014",sans-serif;
 
 @import 'breakpoint';
 @import 'main';
-@import 'top-bar';
-@import "form";
+// @import 'top-bar';
+// @import "form";
 @import "button";
-@import "prose";
-@import "smartlinks";
-@import "box";
-@import "questionnaire2";
+// @import "prose";
+// @import "smartlinks";
+// @import "box";
+// @import "questionnaire2";
 @import "modal";
 // @import "questionnaire";
 // @import "tags";
-@import "card";
-@import "exercise-list";
+// @import "card";
+// @import "exercise-list";
 // @import "custom";
+@import "splash-header";
+@import "splash-main";

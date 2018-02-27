@@ -3,10 +3,68 @@ layout: default
 title: Concursos
 ---
 
+<header class="header">
+  <div class="header__top">
+    <hgroup>
+      <h2>Apostilas <br>das leis específicas <br>para todos os cargos</h2>
+      <h3>Concurso Público
+      <strong>POLÍCIA CIVIL BAHIA</strong></h3>
+      <p>Prof. Lisiane Brito</p>
+    </hgroup>
+    <img src="{{ '/images/prof-lisiane-brito.jpg' | relative_url }}" alt="Professora Lisiane Brito">
+
+  </div>
+  <div class="header__bottom branding">
+    <img src="{{'/images/direito-no-concurso-logo.png' | relative_url }}" alt="Direito no Concurso (Beta)">
+  </div>
+  <div class="header__call-to-action">
+    <a href="#" class="button button--main">veja as apostilas</a>
+  </div>
+</header>
+
 <main role="main"> <!-- main content starts here -->
-{% for item in site.aulas %}
-  <h2>{{ item.title }}</h2>
-  <p>{{ item.materia }}</p>
-  <p><a href="{{ item.url | relative_url }}">{{ item.title }}</a></p>
-{% endfor %}
+
+<div class="content-outline">
+  <hgroup>
+    <h2>Conhecimentos Gerais</h2>
+    <h3><em>(para todos os cargos)</em></h3>
+    <h4>Leis específicas</h4>
+  </hgroup>
+
+  <ul class="content-outline__list">
+    {% for i in (1..4) %}
+    <li class="content-outline__item">
+      <h2>Lei estadual nº 6.677</h2>
+      <h3>26 DE SETEMBRO DE 1994</h3>
+      <p>Estatuto do Servidor Público Civil do Estado da Bahia, das Autarquias e das Fundações Públicas Estaduais</p>
+      <a href="#" class="button">comprar</a>
+    </li>
+  {% endfor %}
+  </ul>
+</div>
+
+<div class="products">
+  <h2>Apostilas</h2>
+  <ul class="product-list">
+    {% for i in (1..8) %}
+    <li class="product-item">
+      <span>PARTE 1/2</span>
+      <h2>APOSTILA ESPECIAL CONCURSO PC BA</h2>
+      <h3>LEI ESTADUAL <strong>nº 6.677</strong></h3>
+      <a href="#" class="button button--available">Disponível</a>
+    </li>
+    <li class="product-item">
+      <span>PARTE 2/2</span>
+      <h2>APOSTILA ESPECIAL CONCURSO PC BA</h2>
+      <h3>LEI ESTADUAL <strong>nº 6.677</strong></h3>
+      <a href="#" class="button button--soon">Em breve</a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
 </main>
+
+<footer>
+  <p>© 2018 All rights reserved.</p>
+</footer>
