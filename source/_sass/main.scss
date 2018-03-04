@@ -39,3 +39,8 @@ body {
 .mobile-only {
   @include breakpoint($medium-up) { display: none !important; }
 }
+
+.show-medium-up {
+  @include breakpoint($small-only) { display: none; }
+}
+

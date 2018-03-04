@@ -8,6 +8,8 @@ $touch: (max-width 64em);
 $medium-up: 40.063em;
 $large: 64.063em;
 
+@import 'breakpoint';
+
 $blue: #00c8ff;
 // $red: #E84A5F;
 // $yellow: #ffcc00;
@@ -70,10 +72,19 @@ $display-font: "din-2014",sans-serif;
   &:-ms-input-placeholder { @content }
 }
 
+.u-wrapper {
+  @include breakpoint($medium-up) { 
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
 // ---
 
 
-@import 'breakpoint';
+
 @import 'main';
 // @import 'top-bar';
 // @import "form";

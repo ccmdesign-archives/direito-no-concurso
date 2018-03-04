@@ -6,16 +6,19 @@ title: Concursos
 <header class="header">
   <div class="header__top">
     <hgroup>
-      <h2>Apostilas <br>das leis específicas <br>para todos os cargos</h2>
+      <img class="logo show-medium-up" src="{{'/images/direito-no-concurso-logo-pos.png' | relative_url }}" alt="Direito no Concurso (Beta)">
+      <h2>Apostilas <br class="mobile-only">das leis específicas <br>para todos os cargos</h2>
       <h3>Concurso Público
       <strong>POLÍCIA CIVIL BAHIA</strong></h3>
-      <p>Prof. Lisiane Brito</p>
+      <p class="mobile-only">Prof. Lisiane Brito</p>
     </hgroup>
-    <img src="{{ '/images/prof-lisiane-brito.jpg' | relative_url }}" alt="Professora Lisiane Brito">
+    <img class="prof-pic" src="{{ '/images/prof-lisiane-brito.jpg' | relative_url }}" alt="Professora Lisiane Brito">
+    <p class="prof-name show-medium-up">Prof. Lisiane Brito</p>
 
   </div>
   <div class="header__bottom branding">
-    <img src="{{'/images/direito-no-concurso-logo.png' | relative_url }}" alt="Direito no Concurso (Beta)">
+    <img class="mobile-only" src="{{'/images/direito-no-concurso-logo.png' | relative_url }}" alt="Direito no Concurso (Beta)">
+    
   </div>
   <div class="header__call-to-action">
     <a href="#" class="button button--main">veja as apostilas</a>
@@ -25,19 +28,25 @@ title: Concursos
 <main role="main"> <!-- main content starts here -->
 
 <div class="content-outline">
-  <hgroup>
+  <hgroup class="wrapper">
     <h2>Conhecimentos Gerais</h2>
     <h3><em>(para todos os cargos)</em></h3>
     <h4>Leis específicas</h4>
   </hgroup>
 
   <ul class="content-outline__list">
-    {% for i in (1..4) %}
-    <li class="content-outline__item">
-      <h2>Lei estadual nº 6.677</h2>
-      <h3>26 DE SETEMBRO DE 1994</h3>
-      <p>Estatuto do Servidor Público Civil do Estado da Bahia, das Autarquias e das Fundações Públicas Estaduais</p>
-      <a href="#" class="button">comprar</a>
+    {% for i in site.data.beta %}
+    <li class="content-outline__item {%unless i.page_url%}soon{%endunless%} ">
+      <div class="wrapper">
+        <hgroup class="titles">
+          <h2>{{i.titulo}}</h2>
+          <h3>{{i.subtitulo}}</h3>
+        </hgroup>
+        
+        <p class="description">{{i.short_desc}}</p>
+        
+        <a href="{{i.page_url}}" class="button">{%if i.page_url%}Comprar{%else%}Breve{%endif%}</a>  
+      </div>
     </li>
   {% endfor %}
   </ul>
@@ -46,19 +55,17 @@ title: Concursos
 <div class="products">
   <h2>Apostilas</h2>
   <ul class="product-list">
-    {% for i in (1..8) %}
-    <li class="product-item">
-      <span>PARTE 1/2</span>
-      <h2>APOSTILA ESPECIAL CONCURSO PC BA</h2>
-      <h3>LEI ESTADUAL <strong>nº 6.677</strong></h3>
-      <a href="#" class="button button--available">Disponível</a>
-    </li>
-    <li class="product-item">
-      <span>PARTE 2/2</span>
-      <h2>APOSTILA ESPECIAL CONCURSO PC BA</h2>
-      <h3>LEI ESTADUAL <strong>nº 6.677</strong></h3>
-      <a href="#" class="button button--soon">Em breve</a>
-    </li>
+    {% for i in site.data.beta %}
+    <div>
+      {% for j in i.files %}
+      <li class="product-item product-item--{%if i.page_url%}available{%else%}soon{%endif%}">
+        <span>PARTE {{j.parte}}</span>
+        <h2>{{i.produto}}</h2>
+        <h3>{{i.titulo}}</h3>
+        <a href="{{j.buy_link}}" class="button button">{%if i.page_url%}Comprar{%else%}Breve{%endif%}</a>
+      </li>
+      {% endfor %}
+    </div>
     {% endfor %}
   </ul>
 </div>

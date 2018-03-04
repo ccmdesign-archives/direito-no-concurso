@@ -1,3 +1,12 @@
+.button:hover {
+  background-color: $red !important;
+  color: white !important;
+}
+
+.wrapper {
+  @extend .u-wrapper;
+}
+
 .content-outline {
   font-family: $display-font;
   padding-top: 50px;
@@ -32,8 +41,43 @@
 
   &__item {
     padding: 30px;
+
+    &.soon {
+      pointer-events: none;
+      opacity: .4;
+    }
+    
+    @include breakpoint($medium-up) { 
+      padding-top: 10px;
+    }
     list-style: none;
     margin: 0;
+
+    .wrapper {
+      @include breakpoint($medium-up) { 
+        display: flex;
+        align-items: flex-start;
+        border-bottom: 1px solid rgba(black, .2);
+
+        .titles { 
+          order: 1;
+          flex: 1;
+          min-width: 340px;
+        }
+        .description { 
+          order: 3;
+          flex: 2;
+          padding: 0 40px 30px;
+          margin: 0;
+        }
+        .button { 
+          order: 2; 
+          flex: 0;
+          min-width: 140px;
+          margin: 0 20px;
+        }
+      }
+    }
 
     h2, h3 {
       margin: 0;
@@ -42,7 +86,7 @@
     h2 {
       font-size: 1.4rem;
       font-weight: 600;
-      text-transform: uppercase;
+      @include breakpoint($small-only) { text-transform: uppercase; }
     }
 
     h3 {
@@ -58,46 +102,77 @@
       background-color: white;
       box-shadow: 2px 2px 8px rgba(black, .1);
     }
-
-    &:nth-child(odd) { background-color: rgba(black, .05); }
+    @include breakpoint($small-only) {
+      &:nth-child(odd) { background-color: rgba(black, .05); }
+    }
   }
 }
 
 .products {
   font-family: $display-font;
-  
+  @include breakpoint($medium-up) { 
+    background-color: rgba(black, .05);
+    padding-top: 30px;
+  }
 
   > h2 {
     text-transform: uppercase;
     text-align: center;
     font-size: 2rem;
+    @include breakpoint($medium-up) { font-size: 3rem; }
+    font-weight: 400;
+    letter-spacing: 2px;
     color: $red;
   }
 }
 
 .product-list {
-  padding: 0; 
+  padding: 0;
+
+  @include breakpoint($medium-up) { 
+    display: flex;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
 }
 
 .product-item {
   padding: 30px;
   list-style: none;
   margin: 0;
-  text-align: right;
-  &:nth-child(odd) { background-color: rgba(black, .05); }
+  
+  @include breakpoint($small-only) {
+    text-align: right;
+    &:nth-child(odd) { background-color: rgba(black, .05); }
+  }
+
+  @include breakpoint($medium-up) { 
+    background-color: white;
+    box-shadow: 2px 2px 8px rgba(black, .1);
+    border-width: 1px;
+    border-style: solid;
+    margin: 16px 8px;
+  }
+
+  span { font-size: 1rem; }
 
   h2 {
     color: $red;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.5;
+    @include breakpoint($medium-up) { font-size: 1.2rem; } 
   }
 
   h3 {
     font-size: 1.2rem;
+    @include breakpoint($medium-up) { font-size: 1rem; } 
     font-weight: 300;
 
     > strong {
       font-size: 1.8rem;
+      @include breakpoint($medium-up) { font-size: 1.3rem; } 
     }
   }
 
@@ -105,19 +180,35 @@
     width: 100%;
     text-align: center;
     box-shadow: 2px 2px 8px rgba(black, .1);
+    border-color: inherit;
 
-    &--available {
+
+
+    @include breakpoint($medium-up) { padding: 10px; } 
+  }
+
+  &--available {
+    border-color: $green;
+
+    .button {
       color: white;
       background-color: $green;
-      border-color: $green;
-    }
-
-    &--soon {
-      color: $green;
-      background-color: white;
-      border-color: $green;
+      
     }
   }
+
+  &--soon {
+    border-color: $red;
+    opacity: .6;
+    pointer-events: none;
+
+    .button {
+      color: $red;
+      background-color: white;
+    }
+  }
+
+  
 }
 
 footer {
@@ -130,5 +221,4 @@ footer {
     font-family: $display-font;
   }
 }
-
 
