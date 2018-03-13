@@ -7,7 +7,7 @@ title: Concursos
   <div class="header__top">
     <hgroup>
       <img class="logo show-medium-up" src="{{'/images/direito-no-concurso-logo-pos.png' | relative_url }}" alt="Direito no Concurso (Beta)">
-      <h2>Apostilas <br class="mobile-only">das leis específicas <br>para todos os cargos</h2>
+      <h2>Aulas<br class="mobile-only"> das leis específicas</h2>
       <h3>Concurso Público
       <strong>POLÍCIA CIVIL BAHIA</strong></h3>
       <p class="mobile-only">Prof. Lisiane Brito</p>
@@ -21,17 +21,17 @@ title: Concursos
     
   </div>
   <div class="header__call-to-action">
-    <a href="#" class="button button--main">veja as apostilas</a>
+    <a href="#aulas" class="button button--main">veja nossas aulas</a>
   </div>
 </header>
 
 <main role="main"> <!-- main content starts here -->
 
-<div class="content-outline">
+<div id="aulas" class="content-outline">
   <hgroup class="wrapper">
-    <h2>Conhecimentos Gerais</h2>
-    <h3><em>(para todos os cargos)</em></h3>
-    <h4>Leis específicas</h4>
+    <h2 class="section-title">Leis Específicas</h2>
+    <!-- <h3><em>(para todos os cargos)</em></h3>
+    <h4>Leis específicas</h4> -->
   </hgroup>
 
   <ul class="content-outline__list">
@@ -40,19 +40,22 @@ title: Concursos
       <div class="wrapper">
         <hgroup class="titles">
           <h2>{{i.titulo}}</h2>
-          <h3>{{i.subtitulo}}</h3>
+          <h3>{{i.categoria}}</h3>
+          <h4 class="preco show-medium-up">R$ {{i.preco}}</h4>
         </hgroup>
         
-        <p class="description">{{i.short_desc}}</p>
+        <p class="description">{{i.desc}}</p>
         
-        <a href="{{i.page_url}}" class="button">{%if i.page_url%}Comprar{%else%}Breve{%endif%}</a>  
+        <h4 class="preco mobile-only">R$ {{i.preco}}</h4>
+
+        <a href="{{i.page_url}}" class="button button--{%if i.page_url%}available{%else%}soon{%endif%}" target="_blank">{%if i.page_url%}Comprar{%else%}Breve{%endif%}</a>  
       </div>
     </li>
   {% endfor %}
   </ul>
 </div>
 
-<div class="products">
+<!-- <div class="products">
   <h2>Apostilas</h2>
   <ul class="product-list">
     {% for i in site.data.beta %}
@@ -68,7 +71,7 @@ title: Concursos
     </div>
     {% endfor %}
   </ul>
-</div>
+</div> -->
 
 </main>
 

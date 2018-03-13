@@ -7,12 +7,16 @@
   @extend .u-wrapper;
 }
 
+
+
 .content-outline {
   font-family: $display-font;
   padding-top: 50px;
+  
 
   hgroup {
-    padding: 0 30px;
+    @include breakpoint($medium-up) { padding: 0 30px; }
+
   }
 
   h2, h3, h4 {
@@ -33,6 +37,16 @@
     font-size: 1.4rem;
     text-transform: uppercase;
     font-weight: 600;
+  }
+
+  .section-title {
+    text-align: center;
+    @include breakpoint($medium-up) { 
+      text-align: left; 
+      font-size: 3.5rem;
+      margin-bottom: 40px;
+      font-weight: 100;
+    }
   }
 
   &__list {
@@ -63,6 +77,13 @@
           order: 1;
           flex: 1;
           min-width: 340px;
+          text-align: left;
+
+          .preco {
+            text-align: left;
+            font-size: 2rem;
+            margin: 0 0 20px;
+          }
         }
         .description { 
           order: 3;
@@ -95,12 +116,25 @@
       color: rgba(black, .4);
     }
 
+    .preco {
+      font-size: 3rem;
+      font-weight: 300;
+      color: $red;
+      margin: 20px 0;
+      text-align: right;
+    }
+
     .button {
       width: 100%;
       text-align: center;
       color: $red;
       background-color: white;
       box-shadow: 2px 2px 8px rgba(black, .1);
+
+      &--available {
+        color: white;
+        background-color: $green;
+      }
     }
     @include breakpoint($small-only) {
       &:nth-child(odd) { background-color: rgba(black, .05); }

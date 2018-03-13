@@ -1,55 +1,37 @@
 - titulo: Lei estadual nº 6.677
-  subtitulo: 26 DE SETEMBRO DE 1994
-  produto: Apostila Especial Concurso PC BA
-  short_desc: Estatuto do Servidor Público Civil do Estado da Bahia, das Autarquias e das Fundações Públicas Estaduais
-  long_desc:
-  page_url: kjh
-  files:
-    - parte: 1/2
-      buy_link: ""
-      sample_link: ""
-    - parte: 2/2
-      buy_link: ""
-      sample_link: ""
+  categoria: Concurso Polícia Civíal Bahia
+  produto: Aula Lei Específica
+  desc: Estatuto do Servidor Público Civil do Estado da Bahia, das Autarquias e das Fundações Públicas Estaduais
+  # page_url: https://go.hotmart.com/F7494103M
+  preco: "35,00"
      
 - titulo: Lei estadual nº 9.433
-  subtitulo: de 01 de março de 2005
-  produto: Apostila Especial Concurso PC BA
-  short_desc: Sobre as licitações e contratos administrativos pertinentes a obras, serviços, compras, alienações e locações
-  long_desc: Lei estadual nº 9.433, de 01 de março de 2005 (Dispõe sobre as licitações e contratos administrativos pertinentes a obras, serviços, compras, alienações e locações no âmbito dos Poderes do Estado da Bahia e dá outras providências).
-  page_url: asf
-  files:
-    - parte: 1/2
-      buy_link: ""
-      sample_link: ""
-    - parte: 2/2
-      buy_link: ""
-      sample_link: ""
+  categoria: Concurso Polícia Civíal Bahia
+  produto: Aula Lei Específica
+  desc: Sobre as licitações e contratos administrativos pertinentes a obras, serviços, compras, alienações e locações
+  # page_url: https://go.hotmart.com/L7497379V
+  preco: "35,00"
 
 - titulo: Lei estadual nº 11.370
-  subtitulo: de 04 de fevereiro de 2009
-  produto: Apostila Especial Concurso PC BA
-  short_desc: Lei Orgânica da Polícia Civil do Estado da Bahia e alterações
-  long_desc: Lei estadual nº 11.370, de 04 de fevereiro de 2009 (Lei Orgânica da Polícia Civil do Estado da Bahia) e alterações.
-  page_url: sdf
-  files:
-    - parte: 1/2
-      buy_link: ""
-      sample_link: ""
-    - parte: 2/2
-      buy_link: ""
-      sample_link: ""
+  categoria: Concurso Polícia Civíal Bahia
+  produto: Aula Lei Específica
+  desc: Lei Orgânica da Polícia Civil do Estado da Bahia e alterações
+  page_url:
+  preco: "35,00"
 
 - titulo: Lei estadual nº 12.209
-  subtitulo: de 20 de abril de 2011
-  produto: Apostila Especial Concurso PC BA
-  short_desc: Sobre o processo administrativo, no âmbito da Administração direta e das entidades da Administração indireta
-  long_desc: Lei estadual nº 12.209, de 20 de abril de 2011 (Dispõe sobre o processo administrativo, no âmbito da Administração direta e das entidades da Administração indireta, regidas pelo regime de direito público, do Estado da Bahia, e dá outras providências).
-  page_url:
-  files:
-    - parte: 1/2
-      buy_link: ""
-      sample_link: ""
-    - parte: 2/2
-      buy_link: ""
-      sample_link: ""
+  categoria: Concurso Polícia Civíal Bahia
+  produto: Aula Lei Específica
+  desc: Sobre o processo administrativo, no âmbito da Administração direta e das entidades da Administração indireta
+  # page_url: https://go.hotmart.com/A7497402Y
+  preco: "35,00"
+
+
+# - titulo: Pacote Completo 
+#   categoria: Concurso Polícia Civíal Bahia
+#   produto: Aula Lei Específica
+#   desc: >
+#     Todas as leis específicas para o Concurso da Polícia Civíl da Bahia.
+#     Lei estadual nº 6.677<br />Lei estadual nº 9.433 <br />Lei estadual nº 11.370<br />Lei estadual nº 12.209
+#   page_url: 
+#   preco: "120,00"
