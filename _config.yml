@@ -17,7 +17,7 @@ title: Direito no Concurso
 email: contato@direitonoconcurso.com.br
 description: >- # this means to ignore newlines until "baseurl:"
   
-baseurl: "/concursos" # the subpath of your site, e.g. /blog
+baseurl: "/direito-no-concurso" # the subpath of your site, e.g. /blog
 url: "https://ccmdesign.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: 
 github_username:  
